@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HTML Meta Tags -->
+    <title>Nationwide wildfire risk</title>
+    <link rel="icon" type="image/x-icon" href="img/wild-fire.png">
+
+    <meta name="description" content="A map showing housing units exposed to wildfire risk.">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://annerquaye.github.io/electricity-access/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nationwide wildfire risk">
+    <meta property="og:description" content="A map showing commmunites exposed to wildfire risk.">
+    <meta property="og:image" content="img/wild-fire.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="annerquaye.github.io">
+    <meta property="twitter:url" content="https://annerquaye.github.io/electricity-access/">
+    <meta name="twitter:title" content="Nationwide wildfire risk">
+    <meta name="twitter:description" content="A map showing commmunites exposed to wildfire risk.">
+    <meta name="twitter:image" content="img/wild-fire.png">
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet" />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+
+
+    <style>
+        .row-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 2em;
+        }
+
+        .column-container {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .row-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <main class="wrapper">
+        <img class="full-bleed" src="img/wildfire2.jpeg" />
+        <em>
+            <p>&nbsp &nbsp &nbspPhoto credit: <a href="https://www.iii.org/">Insurance Information Institute</p></a>
+        </em>
+        <div class="body-wrapper">
+            <h1>Mapping communities nationwide exposed to wildfire</h1>
+            <hr>
+            <div class="byline">
+                <p>By Richard Annerquaye Abbey &nbsp &nbsp &nbsp &nbsp<em>
+                        June 27, 2022</em></p>
+            </div>
+            <p>The <a href="https://wildfirerisk.org/about/">Wildfire Risk to Communities</a>, an initiative of the USDA Forest Service,
+                provides resources that help communities explore wildfire risks.</p>
+            <p>The initiative provides the data that allows communities to understand how wildfire risk varies across a
+                state, region,
+                or county, allowing them to prioritize actions to mitigate risk.</p>
+            <p>The Wildfire Risk to Communities project, the USDA says, uses the best available science to find out
+                which
+                communities face imminent risk of wildfire, and intensity, among other risks.</p>
+            <p>By making this data available, the USDA believes that it is empowering communities with
+                the best resources to manage and mitigate these identifiable risks.</p>
+            <p>The data shows housing units within counties exposed to wildfires.
+                USDA explains exposure as the spatial coincidence of wildfire likelihood and intensity within
+                communities.</p>
+            <p>Generally, any community that is located where wildfire likelihood is greater than zero
+                (in other words, where there is a chance wildfire could occur) is exposed to wildfire.</p>
+            <p>A simple analysis of the Wildfire Risk to Communities<a href="https://wildfirerisk.org/download/">data</a> valid as of March 30, 2020 shows that West Virginia, 97.5%, has the most
+                houses exposed to wildfire.
+                The map below also shows a higher concentration of wildfire risk around the Eastern part of the country.
+            </p>
+            <p>Housing units in Illinois have the lowest wildfire risk, less than 30 percent.
+            </p>
+            <div id="map">
+                <div id='legend'>
+                    <p>This map shows proportion of housing units within a state exposed to wildfire risk.</p>
+                    <hr>
+                    <div id="income-legend" class="legend">
+                        <div><span
+                                style="background-color: #FAFAFA; border-style: solid; border-width: thin"></span>29-46
+                            %</div>
+                        <div><span style="background-color: #EDBFC6"></span>46-63</div>
+                        <div><span style="background-color: #AF8D86"></span>63-76</div>
+                        <div><span style="background-color: #5F4842"></span>76-88</div>
+                        <div><span style="background-color: #432E36"></span>88-97</div>
+                        <div><span style="background-color: #260C1A"></span>97+</div>
+                        <hr>
+                        <p>Data: <a href="https://www.fs.usda.gov/">www.fs.usda.gov</a></p>
+                    </div>
+                </div>
+            </div>
+            <p>The U.S. has sustained 323 weather and climate disasters, such as wildfires, since 1980 
+            where overall damages/costs reached or exceeded $1 billion (including CPI adjustment to 2022), according to the 
+            National Centers for Environmental Information. 
+            The total cost of these events exceeds $2.195 trillion.
+        </p>
+        <p>These events included droughts, floods, freeze events, severe storms, tropical cyclones, wildfires, and winter storms.</p>
+            <p>In the last 42 years, Texas has been the most hit state by these disasters, incurring a cost of about $350bn.</p>
+            <p>WHen the cost of wildfires as a percentage of the total cost of these weather and climate disasters by state,
+                Alaska proportion comes up to 100% while California, which has storied history with wildfires comes in second with nearly 70%.
+            </p>
+            <p>A detailed breakdown of how the NCEI computes its cost can be found<a href="https://www.ncei.noaa.gov/access/billions/"> here</a>.
+            </p>
+            <div class='row-container'>
+                <div class='column-container'>
+                    <img src="img/percent_wildfire-02.png" width=100%>
+                </div>
+                <div class='column-container'>
+                    <img src="img/percent_wildfire-01.png" width=100%>
+                </div>
+            </div>
+
+            </script>
+
+            <p><em>Find the notebook used in the analysis <a
+                        href="https://github.com/Annerquaye/electricity-access/blob/cfa6fac73478c42d2dfcf9e6673f1dc40c16a8a1/energy_maps.ipynb">here</a>
+                    .</em></p>
+        </div>
+    </main>
+</body>
+<script type='text/javascript' src="map.js"></script>
+
+</html>
