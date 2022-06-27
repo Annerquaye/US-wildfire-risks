@@ -8,8 +8,8 @@ mapboxgl.accessToken =
   container: "map",
   style:  "mapbox://styles/annerquaye/cl4uhbfrd001s15mm11k1mvul",
   zoom: 3.1,
-    maxZoom: 4,
-    minZoom: 3,
+    maxZoom: 6,
+    minZoom: 2.7,
     center: [-109.513, 39.438],
     projection: "albers",
 });
